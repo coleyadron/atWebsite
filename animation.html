@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/atLogo.png"/>
+  <title>August Thompson - Animation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-50 bg-gray-800 text-white transition-all duration-300">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold">
+        <img src="images/atLogo.png" alt="Logo" class="inline h-9 w-9 mr-1"/>
+        <a href="index.html" class="hover:text-gray-300">August Thompson</a>
+      </h1>
+      <nav>
+        <ul id="nav-menu" class="hidden md:flex gap-6 items-center">
+          <li class="relative group">
+            <button class="hover:text-gray-300">Gallery</button>
+            <ul class="absolute left-0 mt-2 w-40 bg-white text-gray-800 border rounded shadow-lg 
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                       transition-all duration-200 z-50">
+              <li><a href="comic.html" class="block px-4 py-2 hover:bg-gray-100">Comic</a></li>
+              <li><a href="animation.html" class="block px-4 py-2 hover:bg-gray-100">Animation</a></li>
+              <li><a href="additionalWorks.html" class="block px-4 py-2 hover:bg-gray-100">Additional Work</a></li>
+            </ul>
+          </li>  
+          <li><a href="contactMe.html" class="hover:text-gray-300">Contact Me</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-gray-400 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 w-full bg-gray-800 bg-opacity-90 text-white shadow-lg">
+        <ul class="flex flex-col items-center py-4">
+          <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-700">Home</a></li>
+          <li class="relative group">
+            <button class="block px-4 py-2 hover:bg-gray-700">Gallery</button>
+            <ul class="absolute left-0 mt-2 w-40 bg-white text-gray-800 border rounded shadow-lg 
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                       transition-all duration-200 z-50">
+              <li><a href="comic.html" class="block px-4 py-2 hover:bg-gray-100">Comic</a></li>
+              <li><a href="animation.html" class="block px-4 py-2 hover:bg-gray-100">Animation</a></li>
+              <li><a href="additionalWorks.html" class="block px-4 py-2 hover:bg-gray-100">Additional Work</a></li>
+            </ul>
+          <li><a href="contactUs.html" class="block px-4 py-2 hover:bg-gray-700">Contact Me</a></li>
+        </ul>
+    </div>
+  </header>
+
+  <!-- Gallery Header -->
+  <section class="py-16 text-center bg-slate-700 text-white shadow-[inset_0_0_20px_rgba(0,0,0,0.4)]" style="height: calc(20vh); background-image: url('images/headerImage.png'); background-position: center;">
+    <h1 class="text-4xl font-bold mb-2">Additional Works</h1>
+  </section>
+
+  <!-- Category Buttons -->
+  <div class="flex flex-wrap justify-center gap-4 mt-8">
+    <button class="category-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-category="coolstuffz">Concepts</button>
+    <button class="category-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-category="design">Character Design</button>
+    <button class="category-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-category="backgrounds">Backgrounds</button>
+  </div>
+
+  <!-- Gallery Sections -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+
+      <!-- Cool Stuffz Gallery -->
+      <div id="coolstuffz" class="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="images/additionalWorks/Thompson August Cady_s_Diner_.png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/additionalWorks/Thompson August Cady_s_Diner_.png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Cady's Diner</p>
+          </div>
+        </div>
+        </a>
+        <a href="images/bannerImage.png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/bannerImage.png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Would you like to try?</p>
+          </div>
+        </div>
+        </a>
+        <a href="images/additionalWorks/Thompson August Miss Peregrines home Full page 1 .png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/additionalWorks/Thompson August Miss Peregrines home Full page 1 .png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Miss Peregrines Full Page 1</p>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <!-- Design Gallery -->
+      <div id="design" class="gallery hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="images/design/outlierCharacters/Thompson August Outlier_Sword_Reference_.png.png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/design/outlierCharacters/Thompson August Outlier_Sword_Reference_.png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Outlier Sword Reference</p>
+          </div>
+        </div>
+        </a>
+        <a href="images/design/outlierCharacters/Thompson August Outlier_Reference_.png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/design/outlierCharacters/Thompson August Outlier_Reference_.png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Outlier Reference</p>
+          </div>
+        </div>
+        </a>
+        <a href="images/design/outlierCharacters/Thompson August Outlier_Bike_reference.png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/design/outlierCharacters/Thompson August Outlier_Bike_reference.png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Outlier Bike Reference</p>
+          </div>
+        </div>
+        </a>
+      </div>
+
+        <!-- Backgrounds Gallery -->
+      <div id="backgrounds" class="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="images/additionalWorks/Thompson August Cady_s_Diner_.png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/additionalWorks/Thompson August Cady_s_Diner_.png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Cady's Diner</p>
+          </div>
+        </div>
+        </a>
+        <a href="images/bannerImage.png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/bannerImage.png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Would you like to try?</p>
+          </div>
+        </div>
+        </a>
+        <a href="images/additionalWorks/Thompson August Miss Peregrines home Full page 1 .png" target="_blank" class="block">
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="images/additionalWorks/Thompson August Miss Peregrines home Full page 1 .png" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">Miss Peregrines Full Page 1</p>
+          </div>
+        </div>
+        </a>
+      </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.linkedin.com/in/august-thompson-588484290/" class="hover:text-blue-400">LinkdIn</a>
+        <a href="https://www.youtube.com/@RedNButter" class="hover:text-red-400">Youtube</a>
+        <a href="https://www.artstation.com/augustthompson26" class="hover:text-blue-600">ArtStation</a>
+        <a href="https://www.instagram.com/rednbutter/" class="hover:text-pink-400">Instagram</a>
+      </div>
+      <p class="text-sm text-gray-400">&copy;August Thompson. All rights reserved. Created by <a href="" class="hover:underline">CoCo</a></p>
+    </div>
+  </footer>
+
+  <!-- JS for Category Switching -->
+  <script>
+    const buttons = document.querySelectorAll('.category-btn');
+    const galleries = document.querySelectorAll('.gallery');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.category;
+
+        // Hide all galleries
+        galleries.forEach(g => g.classList.add('hidden'));
+
+        // Show selected
+        document.getElementById(target).classList.remove('hidden');
+
+        // Update button active state
+        buttons.forEach(b => b.classList.remove('bg-blue-800'));
+        btn.classList.add('bg-blue-800');
+      });
+    });
+  </script>
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
