@@ -63,6 +63,7 @@
 
   <!-- Comic Selector Buttons -->
   <div class="flex flex-wrap justify-center gap-4 mt-8">
+    <button class="comic-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-comic="messenger">Messenger Boys</button>
     <button class="comic-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-comic="outlierTest1">Outlier Test 1</button>
     <button class="comic-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-comic="outlierTest2">Outlier Test 2</button>
   </div>
@@ -70,20 +71,30 @@
   <!-- Comic Reader -->
   <section class="py-12 flex-grow">
     <div class="container mx-auto px-4 text-center">
-
-      <!-- Shattered Reflections -->
-      <div id="outlierTest1" class="comic hidden">
-        <img id="shattered-page" src="images/comics/shattered/page1.png" alt="Comic Page"
+      <!-- Messenger -->
+        <div id="messenger" class="comic hidden">
+        <img id="messenger-page" src="images/comics/Messenger boys /Thompson August Messenger Boys Comic page 1.png" alt="Comic Page"
              class="mx-auto rounded-lg shadow-lg max-h-[80vh] w-auto object-contain transition-opacity duration-300" />
 
         <div class="flex justify-center items-center gap-6 mt-6">
-          <button class="prev-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-comic="shattered">Previous</button>
+          <button class="prev-btn bg-neutral-500 text-white px-4 py-2 rounded hover:bg-neutral-600" data-comic="messenger">Previous</button>
+          <p id="messenger-counter" class="text-lg font-semibold">Page 1 of 3</p>
+          <button class="next-btn bg-neutral-500 text-white px-4 py-2 rounded hover:bg-neutral-600" data-comic="messenger">Next</button>
+        </div>
+      </div>
+      <!-- Outlier1 -->
+      <div id="outlierTest1" class="comic hidden">
+        <img id="shattered-page" src="images/comics/Outlier test comics/Comic 1/Thompson August  Outlier test page 1.png" alt="Comic Page"
+             class="mx-auto rounded-lg shadow-lg max-h-[80vh] w-auto object-contain transition-opacity duration-300" />
+
+        <div class="flex justify-center items-center gap-6 mt-6">
+          <button class="prev-btn bg-neutral-500 text-white px-4 py-2 rounded hover:bg-neutral-600" data-comic="shattered">Previous</button>
           <p id="shattered-counter" class="text-lg font-semibold">Page 1 of 3</p>
-          <button class="next-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-comic="shattered">Next</button>
+          <button class="next-btn bg-neutral-500 text-white px-4 py-2 rounded hover:bg-neutral-600" data-comic="shattered">Next</button>
         </div>
       </div>
 
-      <!-- Outlier -->
+      <!-- Outlier2 -->
       <div id="outlierTest2" class="comic hidden">
         <img id="outlier-page" src="images/comics/Outlier test comics/Comic 2/Thompson August Outlier test comic 2 page 1.png" alt="Comic Page"
              class="mx-auto rounded-lg shadow-lg max-h-[80vh] w-auto object-contain transition-opacity duration-300" />
@@ -118,11 +129,19 @@
 
     // Comic page data
     const comicData = {
-      outlier1: {
+        messenger: {
         pages: [
-          'images/comics/shattered/page1.png',
-          'images/comics/shattered/page2.png',
-          'images/comics/shattered/page3.png'
+          'images/comics/Messenger boys /Thompson August Messenger Boys Comic page 1.png',
+          'images/comics/Messenger boys /Thompson August Messenger Boys Comic page 2.png',
+          'images/comics/Messenger boys /Thompson August Messenger Boys Comic page 3.png'
+        ],
+        current: 0  
+        },
+      shattered: {
+        pages: [
+          'images/comics/Outlier test comics/Comic 1/Thompson August  Outlier test page 1.png',
+          'images/comics/Outlier test comics/Comic 1/Thompson August  Outlier test page 2.png',
+          'images/comics/Outlier test comics/Comic 1/Thompson August  Outlier test page 3.png'
         ],
         current: 0
       },
