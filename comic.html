@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/atLogo.png"/>
+  <title>August Thompson - Comic Reader</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-900">
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-50 bg-gray-800 text-white transition-all duration-300">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold">
+        <img src="images/atLogo.png" alt="Logo" class="inline h-9 w-9 mr-1"/>
+        <a href="index.html" class="hover:text-gray-300">August Thompson</a>
+      </h1>
+      <nav>
+        <ul id="nav-menu" class="hidden md:flex gap-6 items-center">
+          <li class="relative group">
+            <button class="hover:text-gray-300">Gallery</button>
+            <ul class="absolute left-0 mt-2 w-40 bg-white text-gray-800 border rounded shadow-lg 
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                       transition-all duration-200 z-50">
+              <li><a href="comic.html" class="block px-4 py-2 hover:bg-gray-100">Comic</a></li>
+              <li><a href="animation.html" class="block px-4 py-2 hover:bg-gray-100">Animation</a></li>
+              <li><a href="additionalWorks.html" class="block px-4 py-2 hover:bg-gray-100">Additional Work</a></li>
+            </ul>
+          </li>  
+          <li><a href="contactMe.html" class="hover:text-gray-300">Contact Me</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-gray-400 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 w-full bg-gray-800 bg-opacity-90 text-white shadow-lg">
+        <ul class="flex flex-col items-center py-4">
+          <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-700">Home</a></li>
+          <li class="relative group">
+            <button class="block px-4 py-2 hover:bg-gray-700">Gallery</button>
+            <ul class="absolute left-0 mt-2 w-40 bg-white text-gray-800 border rounded shadow-lg 
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                       transition-all duration-200 z-50">
+              <li><a href="comic.html" class="block px-4 py-2 hover:bg-gray-100">Comic</a></li>
+              <li><a href="animation.html" class="block px-4 py-2 hover:bg-gray-100">Animation</a></li>
+              <li><a href="additionalWorks.html" class="block px-4 py-2 hover:bg-gray-100">Additional Work</a></li>
+            </ul>
+          <li><a href="contactUs.html" class="block px-4 py-2 hover:bg-gray-700">Contact Me</a></li>
+        </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="py-16 text-center bg-slate-700 text-white shadow-[inset_0_0_20px_rgba(0,0,0,0.4)]" style="height: calc(20vh); background-image: url('images/headerImage.png'); background-position: center;">
+    <h1 class="text-4xl font-bold mb-2">Comic Reader</h1>
+    <p class="text-lg">Select a comic to begin reading.</p>
+  </section>
+
+  <!-- Comic Selector Buttons -->
+  <div class="flex flex-wrap justify-center gap-4 mt-8">
+    <button class="comic-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-comic="outlierTest1">Outlier Test 1</button>
+    <button class="comic-btn bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700" data-comic="outlierTest2">Outlier Test 2</button>
+  </div>
+
+  <!-- Comic Reader -->
+  <section class="py-12 flex-grow">
+    <div class="container mx-auto px-4 text-center">
+
+      <!-- Shattered Reflections -->
+      <div id="outlierTest1" class="comic hidden">
+        <img id="shattered-page" src="images/comics/shattered/page1.png" alt="Comic Page"
+             class="mx-auto rounded-lg shadow-lg max-h-[80vh] w-auto object-contain transition-opacity duration-300" />
+
+        <div class="flex justify-center items-center gap-6 mt-6">
+          <button class="prev-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-comic="shattered">Previous</button>
+          <p id="shattered-counter" class="text-lg font-semibold">Page 1 of 3</p>
+          <button class="next-btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" data-comic="shattered">Next</button>
+        </div>
+      </div>
+
+      <!-- Outlier -->
+      <div id="outlierTest2" class="comic hidden">
+        <img id="outlier-page" src="images/comics/Outlier test comics/Comic 2/Thompson August Outlier test comic 2 page 1.png" alt="Comic Page"
+             class="mx-auto rounded-lg shadow-lg max-h-[80vh] w-auto object-contain transition-opacity duration-300" />
+
+        <div class="flex justify-center items-center gap-6 mt-6">
+          <button class="prev-btn bg-neutral-500 text-white px-4 py-2 rounded hover:bg-neutral-600" data-comic="outlier">Previous</button>
+          <p id="outlier-counter" class="text-lg font-semibold">Page 1 of 4</p>
+          <button class="next-btn bg-neutral-500 text-white px-4 py-2 rounded hover:bg-neutral-600" data-comic="outlier">Next</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="mt-auto bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.linkedin.com/in/august-thompson-588484290/" class="hover:text-blue-400">LinkdIn</a>
+        <a href="https://www.youtube.com/@RedNButter" class="hover:text-red-400">Youtube</a>
+        <a href="https://www.artstation.com/augustthompson26" class="hover:text-blue-600">ArtStation</a>
+        <a href="https://www.instagram.com/rednbutter/" class="hover:text-pink-400">Instagram</a>
+      </div>
+      <p class="text-sm text-gray-400">&copy;August Thompson. All rights reserved. Created by <a href="" class="hover:underline">CoCo</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Comic Navigation -->
+  <script>
+    const comicButtons = document.querySelectorAll('.comic-btn');
+    const comics = document.querySelectorAll('.comic');
+
+    // Comic page data
+    const comicData = {
+      outlier1: {
+        pages: [
+          'images/comics/shattered/page1.png',
+          'images/comics/shattered/page2.png',
+          'images/comics/shattered/page3.png'
+        ],
+        current: 0
+      },
+      outlier: {
+        pages: [
+          'images/comics/Outlier test comics/Comic 2/Thompson August Outlier test comic 2 page 1.png',
+          'images/comics/Outlier test comics/Comic 2/Thompson August Outlier test comic 2 page 2.png',
+          'images/comics/Outlier test comics/Comic 2/Thompson August Outlier test comic 2 page 3.png',
+          'images/comics/Outlier test comics/Comic 2/Thompson August Outlier test comic 2 page 4.png'
+        ],
+        current: 0
+      }
+    };
+
+    // Show selected comic
+    comicButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        comics.forEach(c => c.classList.add('hidden'));
+        const selected = btn.dataset.comic;
+        document.getElementById(selected).classList.remove('hidden');
+        updatePage(selected);
+        comicButtons.forEach(b => b.classList.remove('bg-blue-800'));
+        btn.classList.add('bg-blue-800');
+      });
+    });
+
+    // Update displayed page and counter
+    function updatePage(comicName) {
+      const data = comicData[comicName];
+      const img = document.getElementById(`${comicName}-page`);
+      const counter = document.getElementById(`${comicName}-counter`);
+
+      img.classList.add('opacity-0');
+      setTimeout(() => {
+        img.src = data.pages[data.current];
+        img.classList.remove('opacity-0');
+      }, 150);
+
+      counter.textContent = `Page ${data.current + 1} of ${data.pages.length}`;
+    }
+
+    // Next / Previous buttons
+    document.querySelectorAll('.next-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const comic = comicData[btn.dataset.comic];
+        if (comic.current < comic.pages.length - 1) {
+          comic.current++;
+          updatePage(btn.dataset.comic);
+        }
+      });
+    });
+
+    document.querySelectorAll('.prev-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const comic = comicData[btn.dataset.comic];
+        if (comic.current > 0) {
+          comic.current--;
+          updatePage(btn.dataset.comic);
+        }
+      });
+    });
+  </script>
+    <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
